@@ -56,7 +56,9 @@ class AnimatedMarkerLayer extends StatelessWidget {
                     Point(pxPoint.x + left, pxPoint.y - bottom),
                     Point(pxPoint.x - right, pxPoint.y + top),
                   ),
-                )) continue;
+                )) {
+              continue;
+            }
 
             // Apply map camera to marker position
             final pos = pxPoint - mapCamera.pixelOrigin.toDoublePoint();
